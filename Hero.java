@@ -10,10 +10,10 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
-int spring = -16;
+int spring = -20;
     public Hero() {
         super();
-        gravity = 9.8;
+        gravity = 5.8;
         acc = 0.6;
         drag = 0.8;
         setImage("p1.png");
