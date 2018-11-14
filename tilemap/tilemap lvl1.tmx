@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="70" tileheight="70" infinite="1" nextlayerid="2" nextobjectid="1">
  <tileset firstgid="1" source="world.tsx"/>
- <tileset firstgid="16" source="snailWalk1.tsx"/>
- <tileset firstgid="17" source="lock_red.tsx"/>
- <tileset firstgid="18" name="door_closedMid" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="24" source="snailWalk1.tsx"/>
+ <tileset firstgid="25" source="lock_red.tsx"/>
+ <tileset firstgid="26" name="door_closedMid" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Tiles/door_closedMid.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="19" name="coinGold" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="27" name="coinGold" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Items/coinGold.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="20" name="coinSilver" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="28" name="coinSilver" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Items/coinSilver.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="21" name="gemBlue" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="29" name="gemBlue" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Items/gemBlue.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="22" name="keyYellow" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="30" name="keyYellow" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Items/keyYellow.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="23" name="keyGreen" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="31" name="keyGreen" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Items/keyGreen.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="24" name="keyRed" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="32" name="keyRed" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Items/keyRed.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="25" name="door_closedTop" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="33" name="door_closedTop" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Tiles/door_closedTop.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="26" name="door_openMid" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="34" name="door_openMid" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Tiles/door_openMid.png" width="70" height="70"/>
  </tileset>
- <tileset firstgid="27" name="door_openTop" tilewidth="70" tileheight="70" tilecount="1" columns="1">
+ <tileset firstgid="35" name="door_openTop" tilewidth="70" tileheight="70" tilecount="1" columns="1">
   <image source="../../../platformerGraphicsDeluxeUpdated/Tiles/door_openTop.png" width="70" height="70"/>
  </tileset>
  <layer id="1" name="Tilelaag 1" width="100" height="100" offsetx="88" offsety="109.333">
@@ -49,7 +49,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,7,
-0,0,0,0,0,0,0,0,0,0,0,0,20,9,7,7,
+0,0,0,0,0,0,0,0,0,0,0,0,18,9,7,7,
 0,0,0,0,0,0,0,0,0,0,0,0,9,7,7,7,
 7,7,9,9,9,9,0,0,0,0,0,8,7,7,7,7
 </chunk>
@@ -65,10 +65,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,4,0,16,0,0,0,0,0,0,0,0,0,0,0,0,
 0,9,9,9,9,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="16" y="-16" width="16" height="16">
@@ -86,7 +86,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,24,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0
 </chunk>
    <chunk x="32" y="-16" width="16" height="16">
@@ -102,8 +102,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,
-0,0,13,0,0,18,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,
+0,0,13,0,0,20,0,0,0,0,0,0,0,0,0,0,
 0,0,9,9,9,9,0,0,0,0,0,0,0,0,0,0,
 0,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0
 </chunk>
@@ -144,10 +144,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="16" y="0" width="16" height="16">
-7,0,9,0,9,0,9,8,9,9,9,9,9,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,7,
+7,0,0,9,9,0,0,8,9,9,9,9,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,
 0,0,0,9,0,0,0,0,0,0,0,0,0,0,7,7,
-0,0,0,0,9,0,0,0,0,0,0,21,0,7,7,7,
+0,0,0,0,9,0,0,0,0,0,0,23,0,7,7,7,
 0,0,0,0,0,9,9,9,9,9,9,8,7,7,7,7,
 12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,
 11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
