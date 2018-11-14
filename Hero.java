@@ -10,7 +10,7 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
-
+int spring = -16;
     public Hero() {
         super();
         gravity = 9.8;
@@ -37,10 +37,12 @@ public class Hero extends Mover {
             }
         }
     }
-
+ boolean onGround(){Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2, Tile.class);
+return under != null;}
     public void handleInput() {
-        if (Greenfoot.isKeyDown("space")) {
+        if (Greenfoot.isKeyDown("space")&&onGround() == true) {
             velocityY = -10;
+            velocityY = spring;
         }
 
         if (Greenfoot.isKeyDown("left")) {
