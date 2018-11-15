@@ -10,7 +10,8 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
-int spring = -20;
+public int spring = -20;
+public int frame;
     public Hero() {
         super();
         gravity = 5.8;
@@ -41,9 +42,15 @@ int spring = -20;
 return under != null;}
     public void handleInput() {
         if (Greenfoot.isKeyDown("space")&&onGround() == true) {
+            setImage("p1_jump.png");
             velocityY = -10;
             velocityY = spring;
+            frame++;
         }
+if (frame==1 &&onGround() == true){
+    frame -=1;
+    setImage("p1.png");
+}
 
         if (Greenfoot.isKeyDown("left")) {
             velocityX = -2;
