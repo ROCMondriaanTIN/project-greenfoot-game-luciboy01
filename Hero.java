@@ -32,7 +32,7 @@ int spring = -20;
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                getWorld().removeObject(this);
+                
                 break;
             }
         }

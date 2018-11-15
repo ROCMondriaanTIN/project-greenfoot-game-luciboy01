@@ -86,6 +86,9 @@ public class TileFactory {
                 case 16:
                 tile = new Tile("coinGold.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 break;
+                 case 15:
+                tile = new Tile("snailWalk1.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                break;
                 
                 
                 
