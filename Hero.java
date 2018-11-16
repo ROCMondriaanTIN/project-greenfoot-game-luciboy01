@@ -53,8 +53,10 @@ if (frame==1 &&onGround() == true){
 }
 
         if (Greenfoot.isKeyDown("left")) {
+            setImage("p1_walk03.png");
             velocityX = -2;
         } else if (Greenfoot.isKeyDown("right")) {
+            setImage("p1_walk05.png");
             velocityX = 2;
         }
     }

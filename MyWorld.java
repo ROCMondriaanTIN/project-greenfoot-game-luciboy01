@@ -16,7 +16,7 @@ public class MyWorld extends World {
     public MyWorld() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
-        this.setBackground("bg.png");
+        this.setBackground("bg2.png");
 
         int[][] map = {
 
@@ -55,6 +55,7 @@ public class MyWorld extends World {
 
             };
 
+
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         TileEngine te = new TileEngine(this, 60, 60, map);
         // Declarenre en initialiseren van de camera klasse met de TileEngine klasse 
@@ -71,8 +72,15 @@ public class MyWorld extends World {
         addObject(camera, 0, 0);
         addObject(hero, 454, 973);
         addObject(new Enemy(), 1159, 765);
-        addObject(new Enemy(), 1591, 1125);
-
+        addObject(new Enemy(), 1591, 1127);
+        addObject(new CoinGold(), 454, 973);
+        addObject(new CoinGold(), 1114,673);
+        addObject(new CoinSilver(), 1305,853);
+        addObject(new CoinSilver(), 1305,853);
+        addObject(new DoorClosed(),  3208, 805);
+        addObject(new DoorClosedTop(), 3208, 740);
+        addObject(new Key(), 2493, 810);
+        addObject(new BlueGem(), 2611,1110);
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
         // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
         ce = new CollisionEngine(te, camera);
