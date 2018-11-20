@@ -33,7 +33,42 @@ public int frame;
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                
+                setLocation(300,200);
+            
+
+                break;
+            }
+        }
+        
+                for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
+            if (BlueGem != null) {
+               getWorld().removeObject(BlueGem);
+
+                break;
+            }
+        }
+        
+        
+          for (Actor CoinGold : getIntersectingObjects(CoinGold.class)) {
+            if (CoinGold != null) {
+               getWorld().removeObject(CoinGold);
+
+                break;
+            }
+        }
+        
+         for (Actor CoinSilver : getIntersectingObjects(CoinSilver.class)) {
+            if (CoinSilver != null) {
+               getWorld().removeObject(CoinSilver);
+
+                break;
+            }
+        }
+        
+        for (Actor Key : getIntersectingObjects(Key.class)) {
+            if (Key != null) {
+               getWorld().removeObject(Key);
+
                 break;
             }
         }
