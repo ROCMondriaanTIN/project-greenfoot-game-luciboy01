@@ -95,7 +95,7 @@ return under != null;}
             setImage("p1_jump.png");
             velocityY = -10;
             velocityY = spring;
-            frame++;
+            frame=1;
         }
 if (frame==1 &&onGround() == true){
     frame -=1;

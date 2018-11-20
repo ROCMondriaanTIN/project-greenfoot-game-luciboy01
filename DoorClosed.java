@@ -15,5 +15,13 @@ public class DoorClosed extends Mover
     public void act() 
     {
         applyVelocity();
+        openDoor();
+        
     }    
-}
+    public void openDoor()
+    {
+     if(getWorld().getObjects(Key.class).size()==0){
+            setImage("door_openMid.png");
+        }
+    }
+    }
