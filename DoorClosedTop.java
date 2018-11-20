@@ -14,6 +14,15 @@ public class DoorClosedTop extends Mover
      */
     public void act() 
     {
+        openTop();
         applyVelocity();
     }    
-}
+    public void openTop()
+    {
+        if(getWorld().getObjects(Key.class).size()==0){
+            setImage("door_openTop.png");
+        }
+    }
+    }
+   
+

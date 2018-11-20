@@ -36,7 +36,16 @@ public int frame;
                 setLocation(300,200);
             
 
-                break;
+                return;
+            }
+        }
+        
+        for (Actor Water : getIntersectingObjects(Water.class)) {
+            if (Water != null) {
+                setLocation(300,200);
+            
+
+                return;
             }
         }
         
@@ -44,16 +53,22 @@ public int frame;
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
 
-                break;
+                return;
             }
         }
         
-        
+                        for (Actor Water : getIntersectingObjects(Water.class)) {
+            if (Water != null) {
+               getWorld().removeObject(this);
+
+                return;
+            }
+        }
           for (Actor CoinGold : getIntersectingObjects(CoinGold.class)) {
             if (CoinGold != null) {
                getWorld().removeObject(CoinGold);
 
-                break;
+                return;
             }
         }
         
