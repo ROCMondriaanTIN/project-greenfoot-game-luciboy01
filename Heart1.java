@@ -16,4 +16,15 @@ public class Heart1 extends Mover
     {
         // Add your action code here.
     }    
+    
+    public void HalfHeart()
+    {
+        if (Hero.setLocation(300,200)){
+            setImage("hud_heartHalf");
+            
+            
+        
+        
+}
+}
 }
