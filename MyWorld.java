@@ -103,5 +103,7 @@ public class MyWorld extends World {
         addObject(hudCoin,113,94);
         HudNumber hudNumber = new HudNumber();
         addObject(hudNumber,162,99);
+        NoDia noDia = new NoDia();
+        addObject(noDia,177,33);
     }
 }
