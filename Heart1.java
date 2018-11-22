@@ -8,23 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Heart1 extends Mover
 {
-    /**
-     * Act - do whatever the Heart1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+public static int hartHud=2;
     public void act() 
     {
-        // Add your action code here.
+       if(hartHud==1){setImage("hud_heartHalf.png");}
+        if(hartHud==0){ getWorld().removeObject(this);
+            Greenfoot.setWorld(new GameOver());
+            hartHud=2;}
+        
     }    
     
-    public void HalfHeart()
-    {
-        if (Hero.setLocation(300,200)){
-            setImage("hud_heartHalf");
-            
-            
-        
-        
-}
-}
+    
 }

@@ -34,16 +34,16 @@ public int frame;
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 setLocation(300,200);
-            
+            Heart1.hartHud--;
 
                 return;
             }
         }
-        
+        Heart1.hartHud = Heart1.hartHud;
         for (Actor Water : getIntersectingObjects(Water.class)) {
             if (Water != null) {
                 setLocation(300,200);
-            
+            Heart1.hartHud--;
 
                 return;
             }
