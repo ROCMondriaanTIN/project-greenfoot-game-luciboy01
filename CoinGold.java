@@ -15,6 +15,6 @@ public class CoinGold extends Mover
     public void act() 
     {
         applyVelocity();
-        setImage("coinGold.png");
+      
     }
 }

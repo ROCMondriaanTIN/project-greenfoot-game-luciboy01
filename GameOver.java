@@ -19,6 +19,7 @@ public class GameOver extends World
         super(1000, 800, 1, false); Greenfoot.playSound("game_over_voice-nQTLU271DFE.wav");
         if (Greenfoot.isKeyDown("space"))
         Greenfoot.setWorld(new TitelScreen());
+        HudNumber.score=0;
     }
     
     public void act()

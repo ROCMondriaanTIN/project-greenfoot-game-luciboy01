@@ -1,4 +1,4 @@
-
+       
 import greenfoot.*;
 
 /**
@@ -10,8 +10,8 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
-public int spring = -20;
-public int frame;
+    public int spring = -20;
+    public int frame;
     public Hero() {
         super();
         gravity = 5.8;
@@ -34,8 +34,8 @@ public int frame;
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 setLocation(300,200);
-            Heart1.hartHud--;
-
+                Heart1.hartHud--;
+                HudNumber.score=0;
                 return;
             }
         }
@@ -44,12 +44,12 @@ public int frame;
             if (Water != null) {
                 setLocation(300,200);
                 Heart1.hartHud--;
-
+            
                 return;
             }
         }
         
-                for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
+        for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
 
@@ -57,26 +57,29 @@ public int frame;
             }
         }
         
-                        for (Actor Water : getIntersectingObjects(Water.class)) {
+        for (Actor Water : getIntersectingObjects(Water.class)) {
             if (Water != null) {
                getWorld().removeObject(this);
-
                 return;
             }
         }
-          for (Actor CoinGold : getIntersectingObjects(CoinGold.class)) {
+        for (Actor CoinGold : getIntersectingObjects(CoinGold.class)) {
             if (CoinGold != null) {
                getWorld().removeObject(CoinGold);
+                HudNumber.score=HudNumber.score+2;
 
                 return;
             }
         }
         
-         for (Actor CoinSilver : getIntersectingObjects(CoinSilver.class)) {
+        for (Actor CoinSilver : getIntersectingObjects(CoinSilver.class)) {
             if (CoinSilver != null) {
                getWorld().removeObject(CoinSilver);
+               HudNumber.score++;
+               
+               
 
-                break;
+                return;
             }
         }
         
@@ -84,14 +87,14 @@ public int frame;
             if (Key != null) {
                getWorld().removeObject(Key);
 
-                break;
+                return;
             }
         }
     }
  boolean onGround(){Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2, Tile.class);
 return under != null;}
     public void handleInput() {
-        if (Greenfoot.isKeyDown("space")&&onGround() == true) {
+if (Greenfoot.isKeyDown("space")&&onGround() == true) {
             setImage("p1_jump.png");
             velocityY = -10;
             velocityY = spring;
@@ -102,7 +105,7 @@ if (frame==1 &&onGround() == true){
     setImage("p1.png");
 }
 
-        if (Greenfoot.isKeyDown("left")) {
+ if (Greenfoot.isKeyDown("left")) {
             setImage("p1_walk03.png");
             velocityX = -2;
         } else if (Greenfoot.isKeyDown("right")) {
@@ -111,11 +114,11 @@ if (frame==1 &&onGround() == true){
         }
     }
 
-    public int getWidth() {
+  public int getWidth() {
         return getImage().getWidth();
     }
 
-    public int getHeight() {
+  public int getHeight() {
         return getImage().getHeight();
     }
 }

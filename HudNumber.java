@@ -6,19 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HudNumber extends HudCoin
+public class HudNumber extends Mover
 {
-    /**
-     * Act - do whatever the HudNumber wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        outscore();
-        counter();
-    }    
-    
-    public void outscore(){
+    public static int score;
+    public void act(){
+    counter();
+    }
+       public void counter(){
         if (score==1){
             setImage("hud_1.png");
     }
@@ -26,7 +20,41 @@ public class HudNumber extends HudCoin
         setImage("hud_2.png");
         
 }
+if(score==3){
+        setImage("hud_3.png");
+        
+}
+if(score==4){
+        setImage("hud_4.png");
+        
+}
+if(score==5){
+        setImage("hud_5.png");
+        
+}
+if(score==6){
+        setImage("hud_6.png");
+        
+}
+if(score==7){
+        setImage("hud_7.png");
+        
+}
+if(score==8){
+        setImage("hud_8.png");
+        
+}
+if(score==9){
+        setImage("hud_9.png");
+        
+}
+if(score==10){
+        setImage("hud_.png");
+        
 }
 }
+}
+
+
 
 
