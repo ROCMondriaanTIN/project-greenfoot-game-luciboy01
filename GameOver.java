@@ -20,6 +20,7 @@ public class GameOver extends World
         if (Greenfoot.isKeyDown("space"))
         Greenfoot.setWorld(new TitelScreen());
         HudNumber.score=0;
+        HudNumber2.score2=0;
     }
     
     public void act()

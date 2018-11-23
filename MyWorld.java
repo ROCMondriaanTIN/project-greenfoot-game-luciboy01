@@ -67,7 +67,6 @@ public class MyWorld extends World {
         addObject(new CoinGold(), 580, 973);
         addObject(new CoinGold(), 1114,673);
         addObject(new CoinSilver(), 1305,853);
-        addObject(new CoinSilver(), 1305,853);
         addObject(new DoorClosed(),  3208, 805);
         addObject(new DoorClosedTop(), 3208, 740);
         addObject(new Key(), 2493, 810);
@@ -106,11 +105,21 @@ public class MyWorld extends World {
         NoDia noDia = new NoDia();
         addObject(noDia,177,33);
         removeObject(hudNumber);
-        HudNumber hudNumber2 = new HudNumber();
-        addObject(hudNumber2,164,96);
         CoinSilver coinSilver = new CoinSilver();
         addObject(coinSilver,805,755);
-        HudNumber2 hudNumber22 = new HudNumber2();
-        addObject(hudNumber22,200,97);
+        CoinGold coinGold = new CoinGold();
+        addObject(coinGold,875,693);
+        CoinGold coinGold2 = new CoinGold();
+        addObject(coinGold2,925,634);
+        CoinSilver coinSilver2 = new CoinSilver();
+        addObject(coinSilver2,744,771);
+        CoinSilver coinSilver3 = new CoinSilver();
+        addObject(coinSilver3,701,775);
+        CoinGold coinGold3 = new CoinGold();
+        addObject(coinGold3,794,697);
+        HudNumber2 hudNumber2 = new HudNumber2();
+        addObject(hudNumber2,157,96);
+        HudNumber hudNumber3 = new HudNumber();
+        addObject(hudNumber3,192,96);
     }
 }

@@ -8,13 +8,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class HudNumber2 extends HudNumber
 {
+    public static int score2;
     /**
      * Act - do whatever the HudNumber2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        counter();
+        
+        counter2();
     }    
+    public void counter2(){
+        if(score>=10){
+            score2=score2+10;
+            
+        }
+        if (score2>9){
+            setImage("hud_1.png");
+        }
 }
+}
+
 
