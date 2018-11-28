@@ -11,7 +11,6 @@ public class HudNumber extends Mover
     public static int score;
     public void act(){
             counter();
-            
 
     }
        public void counter(){

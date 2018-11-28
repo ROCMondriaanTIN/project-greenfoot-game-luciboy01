@@ -6,7 +6,8 @@ import greenfoot.*;
  * @author R. Springer
  */
 public class Hero extends Mover {
-
+public boolean right=true;
+public boolean mirror=true;
     private final double gravity;
     private final double acc;
     private final double drag;
@@ -104,39 +105,67 @@ public void Animate(){
     setImage("p1_walk03.png");
     break;
     case 4:
-    setImage("p1_walk05.png");
+    setImage("p1_walk04.png");
     break;
     case 5 :
     setImage("p1_walk05.png");
+    case 6 :
+    setImage("p1_walk06.png");
+    break;
+    case 7:
+    setImage("p1_walk07.png");
+    break;
+    case 8 :
+    setImage("p1_walk08.png");
+    case 9 :
+    setImage("p1_walk09.png");
+    break;
+    case 10:
+    setImage("p1_walk10.png");
+    break;
+    case 11:
+    setImage("p1_walk11.png");
     
+    frame=0;
+    break;
 }
+frame++;
+mirrorImage();
 }
     public void handleInput() {
 if (Greenfoot.isKeyDown("space")&&onGround() == true) {
             setImage("p1_jump.png");
             velocityY = -10;
             velocityY = spring;
-            frame=1;
         }
-if (frame==1 &&onGround() == true){
-    frame -=1;
-    setImage("p1.png");
-}
+
 
  if (Greenfoot.isKeyDown("left")) {
-            setImage("p1.png");
+            right=true;
             velocityX = -2;
+            Animate();
         } else if (Greenfoot.isKeyDown("right")) {
-            setImage("p1.png");
             velocityX = 2;
+            right=false;
+            Animate();
         }
     }
-
-  public int getWidth() {
+public void mirrorImage(){
+if (mirror && right){ 
+    getImage().mirrorHorizontally();
+}
+else if (!mirror && right){
+    getImage().mirrorHorizontally();
+}
+}
+  
+public int getWidth(){
         return getImage().getWidth();
     }
+    
 
   public int getHeight() {
         return getImage().getHeight();
     }
+
 }
