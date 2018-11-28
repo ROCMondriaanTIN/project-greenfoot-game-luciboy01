@@ -35,7 +35,7 @@ public class Hero extends Mover {
             if (enemy != null) {
                 setLocation(300,200);
                 Heart1.hartHud--;
-                HudNumber.score=0;
+              
                 return;
             }
         }
@@ -52,7 +52,6 @@ public class Hero extends Mover {
         for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
-
                 return;
             }
         }
@@ -93,6 +92,25 @@ public class Hero extends Mover {
     }
  boolean onGround(){Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2, Tile.class);
 return under != null;}
+public void Animate(){
+    switch(frame){
+    case 1:
+    setImage("p1_walk01.png");
+    break;
+    case 2:
+    setImage("p1_walk02.png");
+    break;
+    case 3:
+    setImage("p1_walk03.png");
+    break;
+    case 4:
+    setImage("p1_walk05.png");
+    break;
+    case 5 :
+    setImage("p1_walk05.png");
+    
+}
+}
     public void handleInput() {
 if (Greenfoot.isKeyDown("space")&&onGround() == true) {
             setImage("p1_jump.png");
@@ -106,10 +124,10 @@ if (frame==1 &&onGround() == true){
 }
 
  if (Greenfoot.isKeyDown("left")) {
-            setImage("p1_walk03.png");
+            setImage("p1.png");
             velocityX = -2;
         } else if (Greenfoot.isKeyDown("right")) {
-            setImage("p1_walk05.png");
+            setImage("p1.png");
             velocityX = 2;
         }
     }
