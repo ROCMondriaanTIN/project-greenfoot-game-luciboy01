@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.2.0" name="world" tilewidth="70" tileheight="70" tilecount="26" columns="0">
+<tileset version="1.2" tiledversion="1.2.0" name="world" tilewidth="70" tileheight="70" tilecount="29" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="70" height="70" source="../images/box.png"/>
@@ -78,5 +78,14 @@
  </tile>
  <tile id="26">
   <image width="70" height="70" source="../../../platformerGraphicsDeluxeUpdated/Tiles/lock_yellow.png"/>
+ </tile>
+ <tile id="27">
+  <image width="70" height="70" source="../../../platformerGraphicsDeluxeUpdated/Tiles/dirtCenter.png"/>
+ </tile>
+ <tile id="28">
+  <image width="70" height="70" source="../../../platformerGraphicsDeluxeUpdated/Tiles/stoneMid.png"/>
+ </tile>
+ <tile id="29">
+  <image width="70" height="70" source="../images/tochLit2.png"/>
  </tile>
 </tileset>
