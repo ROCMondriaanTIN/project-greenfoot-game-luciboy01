@@ -89,6 +89,18 @@ public class TileFactory {
                  case 15:
                 tile = new Tile("snailWalk1.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 break;
+                case 29:
+                tile = new Tile("tochLit2.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                break;
+                case 28:
+                 tile = new Tile("stoneMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                 tile.isSolid = true;
+                break;
+                case 27:
+                tile = new Tile("dirtCenter.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                 tile.isSolid = true;
+                 break;
+                
                 
                 
                 

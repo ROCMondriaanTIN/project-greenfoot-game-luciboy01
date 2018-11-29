@@ -90,6 +90,13 @@ public boolean mirror=true;
                 return;
             }
         }
+        for (Actor DoorOpen : getIntersectingObjects(DoorOpen.class)) {
+            if (DoorOpen != null) {
+               Greenfoot.setWorld(new level2());
+
+                return;
+            }
+        }
     }
  boolean onGround(){Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2, Tile.class);
 return under != null;}
