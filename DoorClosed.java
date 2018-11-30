@@ -23,5 +23,6 @@ public class DoorClosed extends Mover
      if(getWorld().getObjects(Key.class).size()==0){
             setImage("door_openMid.png");
         }
+        
     }
     }

@@ -50,6 +50,14 @@ public boolean mirror=true;
             }
         }
         
+                for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
+            if (DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
+           Greenfoot.setWorld(new level2());
+            
+                return;
+            }
+        }
+       
         for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
