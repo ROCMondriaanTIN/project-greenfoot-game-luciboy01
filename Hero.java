@@ -143,7 +143,6 @@ mirrorImage();
     public void handleInput() {
 if (Greenfoot.isKeyDown("space")&&onGround() == true) {
             setImage("p1_jump.png");
-            velocityY = -10;
             velocityY = spring;
         }
 

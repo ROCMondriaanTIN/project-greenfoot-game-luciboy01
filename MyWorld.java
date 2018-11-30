@@ -1,4 +1,3 @@
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -76,7 +75,9 @@ public class MyWorld extends World {
         ce = new CollisionEngine(te, camera);
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
-          
+        // Force act zodat de camera op de juist plek staat.
+        camera.act();
+        hero.act();
         prepare();
     }
 
