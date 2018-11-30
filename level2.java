@@ -70,12 +70,12 @@ public class level2 extends World
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
-        addObject(hero, 2000, 973);
+        addObject(hero, 1257, 973);
         addObject(new Enemy(), 1159, 765);
         addObject(new Enemy(), 1591, 1127);
-        addObject(new CoinGold(), 580, 973);
+        addObject(new CoinGold(), 2064, 493);
         addObject(new CoinGold(), 1114,673);
-        addObject(new CoinSilver(), 1305,853);
+        addObject(new CoinSilver(), 1704,853);
         addObject(new DoorClosed(),  3208, 805);
         addObject(new DoorClosedTop(), 3208, 740);
         addObject(new Key(), 2493, 810);
@@ -85,7 +85,8 @@ public class level2 extends World
         ce = new CollisionEngine(te, camera);
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
-          
+        camera.act();
+        hero.act();
         prepare();
     }
 
