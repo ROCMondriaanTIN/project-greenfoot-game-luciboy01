@@ -21,25 +21,26 @@ public boolean mirror=true;
         setImage("p1.png");
     }
 
+
     @Override
     public void act() {
         handleInput();
-        
         velocityX *= drag;
         velocityY += acc;
         if (velocityY > gravity) {
             velocityY = gravity;
         }
         applyVelocity();
-
-        for (Actor enemy : getIntersectingObjects(Enemy.class)) {
-            if (enemy != null) {
-                setLocation(300,200);
+       
+         for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
+            if (Enemy != null) {
+               getWorld().removeObject(this);
                 Heart1.hartHud--;
-              
+            
                 return;
             }
         }
+        
         Heart1.hartHud = Heart1.hartHud;
         for (Actor Water : getIntersectingObjects(Water.class)) {
             if (Water != null) {
@@ -50,9 +51,9 @@ public boolean mirror=true;
             }
         }
         
-                for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
+        for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
-           Greenfoot.setWorld(new level2());
+                Greenfoot.setWorld(new level2());
             
                 return;
             }
@@ -100,7 +101,7 @@ public boolean mirror=true;
         }
     }
  boolean onGround(){Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2, Tile.class);
-return under != null;}
+                    return under != null;}
 public void Animate(){
     switch(frame){
     case 1:
