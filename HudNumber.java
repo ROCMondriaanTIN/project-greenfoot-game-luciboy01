@@ -55,7 +55,11 @@ if(score>=10){
         score=1;
         
 }
+if(score==20){
+   Heart1.hartHud++;
 
+
+}
 }
 }
 

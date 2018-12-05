@@ -13,6 +13,7 @@ public boolean mirror=true;
     private final double drag;
     public int spring = -20;
     public int frame;
+    public int getal;
     public Hero() {
         super();
         gravity = 5.8;
@@ -20,8 +21,6 @@ public boolean mirror=true;
         drag = 0.8;
         setImage("p1.png");
     }
-
-
     @Override
     public void act() {
         handleInput();
@@ -34,13 +33,12 @@ public boolean mirror=true;
        
          for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
             if (Enemy != null) {
-               getWorld().removeObject(this);
+               setLocation(1000,200);
                 Heart1.hartHud--;
             
                 return;
             }
         }
-        
         Heart1.hartHud = Heart1.hartHud;
         for (Actor Water : getIntersectingObjects(Water.class)) {
             if (Water != null) {
@@ -141,23 +139,95 @@ public void Animate(){
 frame++;
 mirrorImage();
 }
+public void AnimateRoze(){
+    switch(frame){
+    case 1:
+    setImage("p3_walk01.png");
+    break;
+    case 2:
+    setImage("p3_walk02.png");
+    break;
+    case 3:
+    setImage("p3_walk03.png");
+    break;
+    case 4:
+    setImage("p3_walk04.png");
+    break;
+    case 5 :
+    setImage("p3_walk05.png");
+    case 6 :
+    setImage("p3_walk06.png");
+    break;
+    case 7:
+    setImage("p3_walk07.png");
+    break;
+    case 8 :
+    setImage("p3_walk08.png");
+    case 9 :
+    setImage("p3_walk09.png");
+    break;
+    case 10:
+    setImage("p3_walk10.png");
+    break;
+    case 11:
+    setImage("p3_walk11.png");
+    
+    frame=0;
+    break;
+}
+frame++;
+mirrorImage();
+}
     public void handleInput() {
-if (Greenfoot.isKeyDown("space")&&onGround() == true) {
+if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             setImage("p1_jump.png");
             velocityY = spring;
         }
 
+ if (Greenfoot.isKeyDown("1")) {
+     getal=1;
+            setImage("p3_stand.png");
 
- if (Greenfoot.isKeyDown("left")) {
+        }
+        
+ if (Greenfoot.isKeyDown("0")) {
+     getal=0;
+            setImage("p3_stand.png");
+
+        }
+ if (Greenfoot.isKeyDown("left")&&getal==0) {
             right=true;
             velocityX = -2;
             Animate();
-        } else if (Greenfoot.isKeyDown("right")) {
+        } else if (Greenfoot.isKeyDown("right")&&getal==0) {
             velocityX = 2;
             right=false;
             Animate();
         }
+    
+    if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==1) {
+            setImage("p3_jump.png");
+            velocityY = spring;
+        }
+
+ if (Greenfoot.isKeyDown("1")) {
+     getal=1;
+            setImage("p3_stand.png");
+
+        }
+        
+
+ if (Greenfoot.isKeyDown("left")&&getal==1) {
+            right=true;
+            velocityX = -2;
+            AnimateRoze();
+        } else if (Greenfoot.isKeyDown("right")&&getal==1) {
+            velocityX = 2;
+            right=false;
+           AnimateRoze();
+        }
     }
+    
 public void mirrorImage(){
 if (mirror && right){ 
     getImage().mirrorHorizontally();
