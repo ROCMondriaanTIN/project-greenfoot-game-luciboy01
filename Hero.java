@@ -41,8 +41,8 @@ public Hero() {
          
          for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
             if (Enemy != null) {
-                checkWorld();
                 h1.removeLife();
+                checkWorld();
                 return;
             }
         }
@@ -58,7 +58,7 @@ public Hero() {
         
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
-                Greenfoot.setWorld(new Level2());
+                Greenfoot.setWorld(new level2());
             
                 return;
             }
@@ -67,6 +67,7 @@ public Hero() {
         for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
+               
                 return;
             }
         }
@@ -110,7 +111,7 @@ public Hero() {
         { 
             setLocation(454, 973);
         }   
-        if (getWorld().getClass()==Level2.class)
+        if (getWorld().getClass()==level2.class)
         { 
             setLocation(1304, 973);
 

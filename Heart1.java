@@ -18,7 +18,7 @@ public class Heart1 extends Mover
        }
        if(hartHud==0){ //getWorld().removeObject(this);
            Greenfoot.setWorld(new GameOver());
-           hartHud=2;
+           hartHud=hartHud+2;
        }
     }
     
