@@ -69,7 +69,7 @@ public class level2 extends World
        
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
-        addObject(hero, 3445, 1033);
+        addObject(hero, 1304, 973);
         addObject(new Enemy(), 3330, 1185);
         addObject(new CoinGold(), 2064, 493);
         addObject(new CoinGold(), 2425,133);

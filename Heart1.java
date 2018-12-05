@@ -9,14 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Heart1 extends Mover
 {
 public static int hartHud=2;
-    public void act() 
+public void act() 
     {
        if(hartHud==1){setImage("hud_heartHalf.png");}
         if(hartHud==0){ getWorld().removeObject(this);
             Greenfoot.setWorld(new GameOver());
             hartHud=2;}
         
-    }    
-    
-    
+    }       
 }

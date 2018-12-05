@@ -31,6 +31,7 @@ public boolean mirror=true;
         }
         applyVelocity();
        
+         
          for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
             if (Enemy != null) {
                setLocation(1000,200);
@@ -178,6 +179,53 @@ public void AnimateRoze(){
 frame++;
 mirrorImage();
 }
+public void AnimateBlauw(){
+    switch(frame){
+    case 1:
+    setImage("p2_walk01.png");
+    break;
+    case 2:
+    setImage("p2_walk02.png");
+    break;
+    case 3:
+    setImage("p2_walk03.png");
+    break;
+    case 4:
+    setImage("p2_walk04.png");
+    break;
+    case 5 :
+    setImage("p2_walk05.png");
+    case 6 :
+    setImage("p2_walk06.png");
+    break;
+    case 7:
+    setImage("p2_walk07.png");
+    break;
+    case 8 :
+    setImage("p2_walk08.png");
+    case 9 :
+    setImage("p2_walk09.png");
+    break;
+    case 10:
+    setImage("p2_walk10.png");
+    break;
+    case 11:
+    setImage("p2_walk11.png");
+    
+    frame=0;
+    break;
+}
+frame++;
+mirrorImage();
+}
+public void checkWorld(){if (getWorld().getClass()==level2.class)
+    { this.setLocation(1304,973);
+    }
+    
+    if (getWorld().getClass()==MyWorld.class)
+    { this.setLocation(454,973);
+    }
+}
     public void handleInput() {
 if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             setImage("p1_jump.png");
@@ -189,6 +237,12 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             setImage("p3_stand.png");
 
         }
+        if (Greenfoot.isKeyDown("2")) {
+            getal=2;
+            setImage("p2_stand.png");
+
+        }
+        
         
  if (Greenfoot.isKeyDown("0")) {
      getal=0;
@@ -209,10 +263,16 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             setImage("p3_jump.png");
             velocityY = spring;
         }
+        
+         if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==2) {
+            setImage("p2_jump.png");
+            velocityY = spring;
+        }
+        
 
- if (Greenfoot.isKeyDown("1")) {
-     getal=1;
-            setImage("p3_stand.png");
+ if     (Greenfoot.isKeyDown("1")) {
+        getal=1;
+        setImage("p3_stand.png");
 
         }
         
@@ -225,6 +285,16 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             velocityX = 2;
             right=false;
            AnimateRoze();
+        }
+        
+        if (Greenfoot.isKeyDown("left")&&getal==2) {
+            right=true;
+            velocityX = -2;
+            AnimateBlauw();
+        } else if (Greenfoot.isKeyDown("right")&&getal==2) {
+            velocityX = 2;
+            right=false;
+           AnimateBlauw();
         }
     }
     
