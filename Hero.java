@@ -1,28 +1,36 @@
-       
+   
 import greenfoot.*;
 
 /**
- *
- * @author R. Springer
- */
+*
+* @author R. Springer
+*/
 public class Hero extends Mover {
 public boolean right=true;
 public boolean mirror=true;
-    private final double gravity;
-    private final double acc;
-    private final double drag;
-    public int spring = -20;
-    public int frame;
-    public int getal;
-    public Hero() {
-        super();
-        gravity = 5.8;
-        acc = 0.6;
-        drag = 0.8;
-        setImage("p1.png");
-    }
+private final double gravity;
+private final double acc;
+private final double drag;
+public int spring = -20;
+public int frame;
+public int getal;
+
+Heart1 h1;
+public Hero() {
+    super();
+    gravity = 5.8;
+    acc = 0.6;
+    drag = 0.8;
+    setImage("p1.png");
+}
+        
     @Override
     public void act() {
+        if (h1 == null)
+        {
+          h1 = new Heart1();  
+          getWorld().addObject(h1,119,31);
+        }
         handleInput();
         velocityX *= drag;
         velocityY += acc;
@@ -30,29 +38,27 @@ public boolean mirror=true;
             velocityY = gravity;
         }
         applyVelocity();
-       
          
          for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
             if (Enemy != null) {
-               setLocation(1000,200);
-                Heart1.hartHud--;
-            
-                return;
-            }
-        }
-        Heart1.hartHud = Heart1.hartHud;
-        for (Actor Water : getIntersectingObjects(Water.class)) {
-            if (Water != null) {
-                setLocation(300,200);
-                Heart1.hartHud--;
-            
+                checkWorld();
+                h1.removeLife();
                 return;
             }
         }
         
+        for (Actor Water : getIntersectingObjects(Water.class)) {
+        if (Water != null) {
+            h1.removeLife();
+            checkWorld();
+            return;
+          }
+            }
+        
+        
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
-                Greenfoot.setWorld(new level2());
+                Greenfoot.setWorld(new Level2());
             
                 return;
             }
@@ -99,6 +105,18 @@ public boolean mirror=true;
             }
         }
     }
+    public void checkWorld(){ 
+        if (getWorld().getClass()==MyWorld.class)
+        { 
+            setLocation(454, 973);
+        }   
+        if (getWorld().getClass()==Level2.class)
+        { 
+            setLocation(1304, 973);
+
+        }
+    }
+
  boolean onGround(){Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2, Tile.class);
                     return under != null;}
 public void Animate(){
@@ -217,14 +235,6 @@ public void AnimateBlauw(){
 }
 frame++;
 mirrorImage();
-}
-public void checkWorld(){if (getWorld().getClass()==level2.class)
-    { this.setLocation(1304,973);
-    }
-    
-    if (getWorld().getClass()==MyWorld.class)
-    { this.setLocation(454,973);
-    }
 }
     public void handleInput() {
 if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {

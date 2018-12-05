@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitelScreen extends World
 {
-Heart1 h1=new Heart1();
+
     /**
      * Constructor for objects of class TitelScreen.
      * 
@@ -34,7 +34,6 @@ Heart1 h1=new Heart1();
     public void act(){
         if (Greenfoot.isKeyDown("space")){
         HudNumber.score = 0;
-        h1.hartHud=h1.hartHud;
         Greenfoot.setWorld(new MyWorld());
     }       
     }
