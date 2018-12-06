@@ -14,6 +14,7 @@ private final double drag;
 public int spring = -20;
 public int frame;
 public static int getal;
+public static int levCheck;
 
 public Hero() {
     super();
@@ -67,8 +68,17 @@ if (getal==0){
         
         
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
-            if (DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
+            if (levCheck==1&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new level2());
+                
+            
+                return;
+            }
+        }
+        
+        for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
+            if (levCheck==2&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
+                Greenfoot.setWorld(new Level3());
             
                 return;
             }
@@ -111,6 +121,7 @@ if (getal==0){
         for (Actor Key : getIntersectingObjects(Key.class)) {
             if (Key != null) {
                getWorld().removeObject(Key);
+               levCheck++;
 
                 return;
             }

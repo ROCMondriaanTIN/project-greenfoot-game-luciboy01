@@ -73,7 +73,7 @@ public class Level3 extends World
         addObject(new Enemy(),2397, 825);
         
         addObject(new CoinGold(), 2064, 493);
-        addObject(new CoinGold(), 2425,133);
+        addObject(new CoinGold(), 300,160);
         addObject(new CoinSilver(), 2877,673);
         addObject(new DoorClosed(),  4528, 1165);
         addObject(new DoorClosedTop(), 4528, 1100);
