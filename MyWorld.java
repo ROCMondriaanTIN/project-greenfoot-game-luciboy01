@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  *
- * @Luciano Dias
+ * @author R. Springer
  */
 public class MyWorld extends World {
 
@@ -84,6 +84,7 @@ public class MyWorld extends World {
     @Override
     public void act() {
         ce.update();
+       
     }
 
     /**
@@ -95,8 +96,8 @@ public class MyWorld extends World {
 
         HudKey hudKey = new HudKey();
         addObject(hudKey,35,100);
-        Heart1 heart1 = new Heart1();
-        addObject(heart1,119,31);
+        /*Heart1 heart1 = new Heart1();
+        addObject(heart1,119,31);*/
         HudPlayer hudPlayer = new HudPlayer();
         addObject(hudPlayer,40,31);
         HudCoin hudCoin = new HudCoin();

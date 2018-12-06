@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class HudNumber extends Mover
 {
     public static int score;
+    Heart1 h1=new Heart1();
     public void act(){
             counter();
 
@@ -56,7 +57,7 @@ if(score>=10){
         
 }
 if(score==20){
-   Heart1.hartHud++;
+   h1.hartHud++;
 
 
 }
