@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class TitelScreen here.
  * 
- * @author (your name) 
+ * @author (Luciano Dias Varao) 
  * @version (a version number or a date)
  */
 public class TitelScreen extends World
@@ -34,6 +34,7 @@ public class TitelScreen extends World
     public void act(){
         if (Greenfoot.isKeyDown("space")){
         HudNumber.score = 0;
+        Heart1.hartHud=2;
         Greenfoot.setWorld(new MyWorld());
     }       
     }

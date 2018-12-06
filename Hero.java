@@ -1,36 +1,28 @@
-   
+       
 import greenfoot.*;
 
 /**
-*
-* @author R. Springer
-*/
+ *
+ * @Luciano Dias
+ */
 public class Hero extends Mover {
 public boolean right=true;
 public boolean mirror=true;
-private final double gravity;
-private final double acc;
-private final double drag;
-public int spring = -20;
-public int frame;
-public int getal;
-
-Heart1 h1;
-public Hero() {
-    super();
-    gravity = 5.8;
-    acc = 0.6;
-    drag = 0.8;
-    setImage("p1.png");
-}
-        
+    private final double gravity;
+    private final double acc;
+    private final double drag;
+    public int spring = -20;
+    public int frame;
+    public int getal;
+    public Hero() {
+        super();
+        gravity = 5.8;
+        acc = 0.6;
+        drag = 0.8;
+        setImage("p1.png");
+    }
     @Override
     public void act() {
-        if (h1 == null)
-        {
-          h1 = new Heart1();  
-          getWorld().addObject(h1,119,31);
-        }
         handleInput();
         velocityX *= drag;
         velocityY += acc;
@@ -38,23 +30,24 @@ public Hero() {
             velocityY = gravity;
         }
         applyVelocity();
-         
+       
          for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
             if (Enemy != null) {
-                h1.removeLife();
-                checkWorld();
+               setLocation(1000,200);
+                Heart1.hartHud--;
+            
                 return;
             }
         }
-        
+        Heart1.hartHud = Heart1.hartHud;
         for (Actor Water : getIntersectingObjects(Water.class)) {
-        if (Water != null) {
-            h1.removeLife();
-            checkWorld();
-            return;
-          }
+            if (Water != null) {
+                setLocation(300,200);
+                Heart1.hartHud--;
+            
+                return;
             }
-        
+        }
         
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
@@ -67,7 +60,6 @@ public Hero() {
         for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
-               
                 return;
             }
         }
@@ -106,18 +98,6 @@ public Hero() {
             }
         }
     }
-    public void checkWorld(){ 
-        if (getWorld().getClass()==MyWorld.class)
-        { 
-            setLocation(454, 973);
-        }   
-        if (getWorld().getClass()==level2.class)
-        { 
-            setLocation(1304, 973);
-
-        }
-    }
-
  boolean onGround(){Actor under = getOneObjectAtOffset(0,getImage().getHeight()/2, Tile.class);
                     return under != null;}
 public void Animate(){
@@ -198,45 +178,6 @@ public void AnimateRoze(){
 frame++;
 mirrorImage();
 }
-public void AnimateBlauw(){
-    switch(frame){
-    case 1:
-    setImage("p2_walk01.png");
-    break;
-    case 2:
-    setImage("p2_walk02.png");
-    break;
-    case 3:
-    setImage("p2_walk03.png");
-    break;
-    case 4:
-    setImage("p2_walk04.png");
-    break;
-    case 5 :
-    setImage("p2_walk05.png");
-    case 6 :
-    setImage("p2_walk06.png");
-    break;
-    case 7:
-    setImage("p2_walk07.png");
-    break;
-    case 8 :
-    setImage("p2_walk08.png");
-    case 9 :
-    setImage("p2_walk09.png");
-    break;
-    case 10:
-    setImage("p2_walk10.png");
-    break;
-    case 11:
-    setImage("p2_walk11.png");
-    
-    frame=0;
-    break;
-}
-frame++;
-mirrorImage();
-}
     public void handleInput() {
 if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             setImage("p1_jump.png");
@@ -248,12 +189,6 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             setImage("p3_stand.png");
 
         }
-        if (Greenfoot.isKeyDown("2")) {
-            getal=2;
-            setImage("p2_stand.png");
-
-        }
-        
         
  if (Greenfoot.isKeyDown("0")) {
      getal=0;
@@ -274,16 +209,10 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             setImage("p3_jump.png");
             velocityY = spring;
         }
-        
-         if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==2) {
-            setImage("p2_jump.png");
-            velocityY = spring;
-        }
-        
 
- if     (Greenfoot.isKeyDown("1")) {
-        getal=1;
-        setImage("p3_stand.png");
+ if (Greenfoot.isKeyDown("1")) {
+     getal=1;
+            setImage("p3_stand.png");
 
         }
         
@@ -296,16 +225,6 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
             velocityX = 2;
             right=false;
            AnimateRoze();
-        }
-        
-        if (Greenfoot.isKeyDown("left")&&getal==2) {
-            right=true;
-            velocityX = -2;
-            AnimateBlauw();
-        } else if (Greenfoot.isKeyDown("right")&&getal==2) {
-            velocityX = 2;
-            right=false;
-           AnimateBlauw();
         }
     }
     
