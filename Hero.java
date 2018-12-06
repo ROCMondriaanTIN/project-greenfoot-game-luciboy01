@@ -13,14 +13,22 @@ private final double acc;
 private final double drag;
 public int spring = -20;
 public int frame;
-public int getal;
+public static int getal;
 
 public Hero() {
     super();
     gravity = 5.8;
     acc = 0.6;
     drag = 0.8;
+    if (getal==2){   
+    setImage("p3_stand.png");
+}
+if (getal==1){   
+    setImage("p2_stand.png");
+}
+if (getal==0){   
     setImage("p1.png");
+}
 }
        
     @Override
@@ -238,19 +246,19 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
 
  if (Greenfoot.isKeyDown("1")) {
      getal=1;
-            setImage("p3_stand.png");
+            setImage("p2_stand.png");
 
         }
         if (Greenfoot.isKeyDown("2")) {
             getal=2;
-            setImage("p2_stand.png");
+            setImage("p3_stand.png");
 
         }
         
         
  if (Greenfoot.isKeyDown("0")) {
      getal=0;
-            setImage("p3_stand.png");
+            setImage("p1.png");
 
         }
  if (Greenfoot.isKeyDown("left")&&getal==0) {
@@ -264,38 +272,38 @@ if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==0) {
         }
     
     if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==1) {
-            setImage("p3_jump.png");
-            velocityY = spring;
-        }
-        
-         if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==2) {
             setImage("p2_jump.png");
             velocityY = spring;
         }
         
+         if (Greenfoot.isKeyDown("space")&&onGround() == true&&getal==2) {
+            setImage("p3_jump.png");
+            velocityY = spring;
+        }
+        
 
- if     (Greenfoot.isKeyDown("1")) {
-        getal=1;
+ if     (Greenfoot.isKeyDown("2")) {
+        getal=2;
         setImage("p3_stand.png");
 
         }
         
 
- if (Greenfoot.isKeyDown("left")&&getal==1) {
+ if (Greenfoot.isKeyDown("left")&&getal==2) {
             right=true;
             velocityX = -2;
             AnimateRoze();
-        } else if (Greenfoot.isKeyDown("right")&&getal==1) {
+        } else if (Greenfoot.isKeyDown("right")&&getal==2) {
             velocityX = 2;
             right=false;
            AnimateRoze();
         }
         
-        if (Greenfoot.isKeyDown("left")&&getal==2) {
+        if (Greenfoot.isKeyDown("left")&&getal==1) {
             right=true;
             velocityX = -2;
             AnimateBlauw();
-        } else if (Greenfoot.isKeyDown("right")&&getal==2) {
+        } else if (Greenfoot.isKeyDown("right")&&getal==1) {
             velocityX = 2;
             right=false;
            AnimateBlauw();
