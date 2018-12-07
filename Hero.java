@@ -45,12 +45,15 @@ if (getal==0){
         applyVelocity();
          
          for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
-            if (Enemy != null) {
+            if (onGround()==true&&Enemy != null) {
       
                 Heart1.hartHud--;
                 setLocation(300, 200);
               
                 return;
+            }
+            if(onGround()!=true&&isTouching(Enemy.class)){
+                getWorld().removeObject(Enemy);
             }
           
                 
