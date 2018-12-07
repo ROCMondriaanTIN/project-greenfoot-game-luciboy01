@@ -36,5 +36,27 @@ public class TitelScreen extends World
         HudNumber.score = 0;
         Greenfoot.setWorld(new MyWorld());
     }       
+        if (Greenfoot.isKeyDown("q")){
+        Greenfoot.setWorld(new LevelSelect());
+       
+    }    
+    if (Greenfoot.isKeyDown("q")&&Hero.levCheck==1){
+        Greenfoot.setWorld(new LevelSelect());
+       
+    }
+    if (Greenfoot.isKeyDown("q")&&Hero.levCheck==2){
+        Greenfoot.setWorld(new LevelSelect2());
+       
+    }
+    if (Greenfoot.isKeyDown("q")&&Hero.levCheck==3){
+        Greenfoot.setWorld(new LevelSelect3());
+       
+    }
+    
+    if (Greenfoot.isKeyDown("w")){
+        HudNumber.score = 0;
+        Greenfoot.setWorld(new KarakterSelect());
+       
+    }       
     }
 }
