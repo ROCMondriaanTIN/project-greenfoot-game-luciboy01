@@ -123,5 +123,7 @@ public class MyWorld extends World {
         addObject(hudNumber2,157,96);
         HudNumber hudNumber3 = new HudNumber();
         addObject(hudNumber3,192,96);
+        HeartCount heartCount = new HeartCount();
+        addObject(heartCount,79,33);
     }
 }
