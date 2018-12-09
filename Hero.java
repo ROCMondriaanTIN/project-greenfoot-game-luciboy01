@@ -15,6 +15,8 @@ public int spring = -20;
 public int frame;
 public static int getal;
 public static int levCheck;
+public static int gemCheck;
+
 
 public Hero() {
     super();
@@ -68,11 +70,20 @@ if (getal==0){
             return;
           }
             }
+            
+            for (Actor Lava : getIntersectingObjects(Lava.class)) {
+        if (Lava != null) {
+            Heart1.hartHud--;
+                setLocation(300, 200);
+
+            return;
+          }
+            }
         
         
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (levCheck==1&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
-                Greenfoot.setWorld(new level2());
+                Greenfoot.setWorld(new Level2());
                 
             
                 return;
@@ -86,10 +97,19 @@ if (getal==0){
                 return;
             }
         }
+        
+        for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
+            if (levCheck==3&&gemCheck==4&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
+                Greenfoot.setWorld(new Level4());
+            
+                return;
+            }
+        }
        
         for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
+               gemCheck++;
                
                 return;
             }
@@ -109,11 +129,13 @@ if (getal==0){
                 return;
             }
         }
+    
         
         for (Actor CoinSilver : getIntersectingObjects(CoinSilver.class)) {
             if (CoinSilver != null) {
                getWorld().removeObject(CoinSilver);
                HudNumber.score++;
+               
                
                
 

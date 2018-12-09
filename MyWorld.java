@@ -84,6 +84,10 @@ public class MyWorld extends World {
     @Override
     public void act() {
         ce.update();
+         if (Greenfoot.isKeyDown("b")){
+        Greenfoot.setWorld(new TitelScreen());
+       
+    }
        
     }
 

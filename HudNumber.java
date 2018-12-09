@@ -54,13 +54,10 @@ if(score==9){
 }
 if(score>=10){
         score=1;
+
         
 }
-if(score==20){
-   h1.hartHud++;
 
-
-}
 }
 }
 

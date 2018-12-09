@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @Luciano Dias Varao
  * @version (a version number or a date)
  */
-public class level2 extends World
+public class Level2 extends World
 {
    private CollisionEngine ce;
 
@@ -14,7 +14,7 @@ public class level2 extends World
      * Constructor for objects of class MyWorld.
      *
      */
-    public level2() {
+    public Level2() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
         this.setBackground("castlel.png");
@@ -93,6 +93,11 @@ public class level2 extends World
     @Override
     public void act() {
         ce.update();
+         if (Greenfoot.isKeyDown("b")){
+        Greenfoot.setWorld(new TitelScreen());
+       
+    }
+        
     }
 
     /**
@@ -131,5 +136,7 @@ public class level2 extends World
         addObject(hudNumber2,157,96);
         HudNumber hudNumber3 = new HudNumber();
         addObject(hudNumber3,192,96);
+        HeartCount heartCount = new HeartCount();
+        addObject(heartCount,81,29);
     }
 }

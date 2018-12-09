@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Heart1 extends Mover
 {
     public static int hartHud=2;
+    public static int lifeUp;
     public void act() 
     {
        if(hartHud==1){
@@ -19,6 +20,8 @@ public class Heart1 extends Mover
            Greenfoot.setWorld(new GameOver());
            hartHud=hartHud+2;
        }
+       
+       
     }
     
     

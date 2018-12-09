@@ -25,7 +25,7 @@ public void act(){
         
     }
     if (Greenfoot.isKeyDown("w")){
-        Greenfoot.setWorld(new level2());
+        Greenfoot.setWorld(new Level2());
     }
 }
     /**
