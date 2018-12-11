@@ -58,6 +58,5 @@ public class TitelScreen extends World
         Greenfoot.setWorld(new KarakterSelect());
        
     } 
-    Greenfoot.playSound("Be Happy - AShamaluevMusic.mp3");
     }
 }
