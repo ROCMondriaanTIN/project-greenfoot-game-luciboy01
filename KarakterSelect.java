@@ -23,13 +23,15 @@ public class KarakterSelect extends World
     public void act(){
         if (Greenfoot.isKeyDown("2")){
         Hero.getal=2;
-        
+        Greenfoot.setWorld(new MyWorld());
     }
     if (Greenfoot.isKeyDown("1")){
         Hero.getal=1;
+        Greenfoot.setWorld(new MyWorld());
     }
     if (Greenfoot.isKeyDown("0")){
         Hero.getal=0;
+        Greenfoot.setWorld(new MyWorld());
     }
         if (Greenfoot.isKeyDown("space"))
            

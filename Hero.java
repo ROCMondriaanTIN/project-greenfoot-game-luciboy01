@@ -99,7 +99,7 @@ if (getal==0){
         }
         
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
-            if (levCheck==3&&gemCheck==4&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
+            if (levCheck==3&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new Level4());
             
                 return;
@@ -125,6 +125,7 @@ if (getal==0){
             if (CoinGold != null) {
                getWorld().removeObject(CoinGold);
                 HudNumber.score=HudNumber.score+2;
+                Greenfoot.playSound("Coin-pick-up-sound-effect.wav");
 
                 return;
             }
@@ -135,6 +136,7 @@ if (getal==0){
             if (CoinSilver != null) {
                getWorld().removeObject(CoinSilver);
                HudNumber.score++;
+               Greenfoot.playSound("Coin-pick-up-sound-effect.wav");
                
                
                

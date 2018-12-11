@@ -15,7 +15,7 @@ public class TitelScreen extends World
      */
     public TitelScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels
         super(1000, 800, 1, false); 
         prepare();
     }
@@ -48,8 +48,8 @@ public class TitelScreen extends World
         Greenfoot.setWorld(new LevelSelect3());
        
     }
-     if (Greenfoot.isKeyDown("q")&&Hero.levCheck==3){
-        Greenfoot.setWorld(new LevelSelect3());
+     if (Greenfoot.isKeyDown("q")&&Hero.levCheck==4){
+        Greenfoot.setWorld(new LevelSelect4());
        
     }
     
@@ -57,6 +57,7 @@ public class TitelScreen extends World
         HudNumber.score = 0;
         Greenfoot.setWorld(new KarakterSelect());
        
-    }       
+    } 
+    Greenfoot.playSound("Be Happy - AShamaluevMusic.mp3");
     }
 }

@@ -26,8 +26,15 @@ public class HudNumber2 extends HudNumber
         if (score2>9){
             setImage("hud_1.png");
         }
-        if (score2>19){
+        if (score2>=19){
+            Heart1.hartHud++;
+            score2=0;
             
+        }
+        if (score2>=19){
+            score2=0;
+        }
+        if (score2==0){
             setImage("hud_0.png");
         }
 }
