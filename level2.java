@@ -120,18 +120,6 @@ public class Level2 extends World
         NoDia noDia = new NoDia();
         addObject(noDia,177,33);
         removeObject(hudNumber);
-        CoinSilver coinSilver = new CoinSilver();
-        addObject(coinSilver,805,755);
-        CoinGold coinGold = new CoinGold();
-        addObject(coinGold,875,693);
-        CoinGold coinGold2 = new CoinGold();
-        addObject(coinGold2,925,634);
-        CoinSilver coinSilver2 = new CoinSilver();
-        addObject(coinSilver2,744,771);
-        CoinSilver coinSilver3 = new CoinSilver();
-        addObject(coinSilver3,701,775);
-        CoinGold coinGold3 = new CoinGold();
-        addObject(coinGold3,794,697);
         HudNumber2 hudNumber2 = new HudNumber2();
         addObject(hudNumber2,157,96);
         HudNumber hudNumber3 = new HudNumber();
