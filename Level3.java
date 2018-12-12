@@ -17,7 +17,7 @@ public class Level3 extends World
     public Level3() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
-        this.setBackground("Platform_Racing_3_-_Desert_Background.png");
+        this.setBackground("rock_4.png");
         Hero.levCheck=2;
       
        
@@ -76,6 +76,7 @@ public class Level3 extends World
         addObject(new CoinGold(), 2064, 493);
         addObject(new CoinGold(), 300,160);
         addObject(new CoinSilver(), 2877,673);
+        addObject(new CoinSilver(), 3497,973);
         addObject(new DoorClosed(),  4528, 1165);
         addObject(new DoorClosedTop(), 4528, 1100);
         addObject(new Key(), 3450, 1033);
@@ -119,18 +120,6 @@ public class Level3 extends World
         NoDia noDia = new NoDia();
         addObject(noDia,177,33);
         removeObject(hudNumber);
-        CoinSilver coinSilver = new CoinSilver();
-        addObject(coinSilver,805,755);
-        CoinGold coinGold = new CoinGold();
-        addObject(coinGold,875,693);
-        CoinGold coinGold2 = new CoinGold();
-        addObject(coinGold2,925,634);
-        CoinSilver coinSilver2 = new CoinSilver();
-        addObject(coinSilver2,744,771);
-        CoinSilver coinSilver3 = new CoinSilver();
-        addObject(coinSilver3,701,775);
-        CoinGold coinGold3 = new CoinGold();
-        addObject(coinGold3,794,697);
         HudNumber2 hudNumber2 = new HudNumber2();
         addObject(hudNumber2,157,96);
         HudNumber hudNumber3 = new HudNumber();

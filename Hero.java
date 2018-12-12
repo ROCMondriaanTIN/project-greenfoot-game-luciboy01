@@ -90,6 +90,8 @@ if (getal==0){
             }
         }
         
+        
+        
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (levCheck==2&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new Level3());
@@ -101,6 +103,15 @@ if (getal==0){
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (levCheck==3&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new Level4());
+            
+                return;
+            }
+        }
+        
+        for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
+            if (levCheck==4&&gemCheck==4&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
+                Greenfoot.setWorld(new EasterEgg());
+                
             
                 return;
             }

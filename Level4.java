@@ -72,8 +72,9 @@ public class Level4 extends World
         addObject(camera, 0, 0);
         addObject(hero, 1304, 973);
         addObject(new Enemy(),1444, 825);
-        addObject(new CoinGold(), 2064, 973);
-        addObject(new CoinGold(), 300,160);
+        addObject(new CoinGold(), 1168, 853);
+        addObject(new CoinGold(), 1753,793);
+        addObject(new CoinGold(), 2380,469);
         addObject(new CoinSilver(), 2877,673);
         addObject(new DoorClosed(),  4528, 1165);
         addObject(new DoorClosedTop(), 4528, 1100);
