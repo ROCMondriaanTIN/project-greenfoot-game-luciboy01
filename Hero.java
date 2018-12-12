@@ -105,6 +105,14 @@ if (getal==0){
                 return;
             }
         }
+        
+        for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
+            if (levCheck==4&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
+                Greenfoot.setWorld(new Congrats());
+            
+                return;
+            }
+        }
        
         for (Actor BlueGem : getIntersectingObjects(BlueGem.class)) {
             if (BlueGem != null) {

@@ -33,10 +33,9 @@ public class TitelScreen extends World
     
     public void act(){
         if (Greenfoot.isKeyDown("space")){
-        HudNumber.score = 0;
         Greenfoot.setWorld(new MyWorld());
     }       
-    if (Greenfoot.isKeyDown("q")&&Hero.levCheck==1){
+    if (Greenfoot.isKeyDown("q")&&Hero.levCheck==0){
         Greenfoot.setWorld(new LevelSelect());
        
     }
@@ -59,7 +58,7 @@ public class TitelScreen extends World
        
     } 
     if (Greenfoot.isKeyDown("e")){
-        Greenfoot.setWorld(new instructies());
+        Greenfoot.setWorld(new Instructies());
         
        
     } 
