@@ -48,7 +48,7 @@ if (getal==0){
          
          for (Actor Enemy : getIntersectingObjects(Enemy.class)) {
             if (onGround()==true&&Enemy != null) {
-      
+                Greenfoot.playSound("Punch_Hit_Game_Sound_Effect_Download_Link-YtK-7aRYwOg.wav");
                 Heart1.hartHud--;
                 setLocation(300, 200);
               
@@ -56,6 +56,7 @@ if (getal==0){
             }
             if(onGround()!=true&&isTouching(Enemy.class)){
                 getWorld().removeObject(Enemy);
+                Greenfoot.playSound("Squish_Sound_Effects-so9Hi69UtRg.wav");
             }
           
                 
@@ -66,6 +67,7 @@ if (getal==0){
         if (Water != null) {
             Heart1.hartHud--;
                 setLocation(300, 200);
+                Greenfoot.playSound("Water_Splash_Sound_Effect-2ELkxJmA43Q.wav");
 
             return;
           }
@@ -75,6 +77,7 @@ if (getal==0){
         if (Lava != null) {
             Heart1.hartHud--;
                 setLocation(300, 200);
+                Greenfoot.playSound("Water_Splash_Sound_Effect-2ELkxJmA43Q.wav");
 
             return;
           }
@@ -84,6 +87,7 @@ if (getal==0){
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (levCheck==1&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new Level2());
+                Greenfoot.playSound("Kids_Saying_Yay_Sound_Effect-xUMUEaaqlWA.wav");
                 
             
                 return;
@@ -95,6 +99,7 @@ if (getal==0){
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (levCheck==2&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new Level3());
+                Greenfoot.playSound("Kids_Saying_Yay_Sound_Effect-xUMUEaaqlWA.wav");
             
                 return;
             }
@@ -103,6 +108,7 @@ if (getal==0){
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (levCheck==3&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new Level4());
+                Greenfoot.playSound("Kids_Saying_Yay_Sound_Effect-xUMUEaaqlWA.wav");
             
                 return;
             }
@@ -111,6 +117,7 @@ if (getal==0){
         for (Actor DoorClosed : getIntersectingObjects(DoorClosed.class)) {
             if (levCheck==4&&gemCheck==4&&DoorClosed != null&&getWorld().getObjects(Key.class).size()==0) {
                 Greenfoot.setWorld(new EasterEgg());
+                Greenfoot.playSound("Kids_Saying_Yay_Sound_Effect-xUMUEaaqlWA.wav");
                 
             
                 return;
