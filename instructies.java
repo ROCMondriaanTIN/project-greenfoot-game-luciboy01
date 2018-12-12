@@ -19,8 +19,13 @@ public class Instructies extends World
         super(1000, 800, 1, false); 
         prepare();
     }
-
-    /**
+public void act(){
+    if (Greenfoot.isKeyDown("b")||Greenfoot.isKeyDown("space")){
+        Greenfoot.setWorld(new TitelScreen());
+        
+}
+}
+   /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
