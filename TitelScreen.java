@@ -54,8 +54,13 @@ public class TitelScreen extends World
     }
     
     if (Greenfoot.isKeyDown("w")){
-        HudNumber.score = 0;
         Greenfoot.setWorld(new KarakterSelect());
+        
+       
+    } 
+    if (Greenfoot.isKeyDown("e")){
+        Greenfoot.setWorld(new instructies());
+        
        
     } 
     }
