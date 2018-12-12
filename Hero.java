@@ -129,6 +129,7 @@ if (getal==0){
             if (BlueGem != null) {
                getWorld().removeObject(BlueGem);
                gemCheck++;
+               Greenfoot.playSound("253172__suntemple__retro-bonus-pickup-sfx.wav");
                
                 return;
             }
@@ -168,6 +169,7 @@ if (getal==0){
             if (Key != null) {
                getWorld().removeObject(Key);
                levCheck++;
+               Greenfoot.playSound("key_pickup.wav");
 
                 return;
             }
